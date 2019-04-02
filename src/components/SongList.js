@@ -6,19 +6,24 @@ class SongList extends React.Component {
     renderList() {
         return this.props.songs.map((song) => {
             return (
-                <div className="item" key={song.title}>
-                    <div className="right floated content">
-                        <button>Select</button>
-                    </div>
+                <div className="ui items">
 
-                    <div className="content"> { song.title } </div>
+                    <div className="items" key={song.title}>
+                        <div className="right floated content">
+                            <button className="ui button primary">Select</button>
+                        </div>
+
+                        <div className="content"> { song.title } </div>
+                    </div>
                 </div>
             );
         });
     }
 
     render() {
+        // console.log("dsf", this.props)
         return  <div> { this.renderList() } </div>
+        // return  <div> works </div>
        
     }
 }
